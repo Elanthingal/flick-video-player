@@ -3,6 +3,7 @@ library flick_manager;
 import 'dart:async';
 
 import 'flick_manager.dart';
+import 'package:video_player/video_player.dart';
 
 class DataManager {
   DataManager({this.flickManager, this.urls});
@@ -11,7 +12,7 @@ class DataManager {
   final FlickManager? flickManager;
   final urls;
 
-  Timer videoChangeTimer;
+  Timer? videoChangeTimer;
 
   String getNextVideo() {
     currentPlaying++;
@@ -26,7 +27,7 @@ class DataManager {
     return currentPlaying != 0;
   }
 
-  skipToNextVideo([Duration duration]) {
+  skipToNextVideo([Duration? duration]) {
     if (hasNextVideo()) {
       flickManager?.handleChangeVideo(
           VideoPlayerController.network(urls[currentPlaying + 1].cycleLink),
@@ -39,7 +40,7 @@ class DataManager {
   skipToPreviousVideo() {
     if (hasPreviousVideo()) {
       currentPlaying--;
-      flickManager.handleChangeVideo(
+      flickManager?.handleChangeVideo(
           VideoPlayerController.network(urls[currentPlaying].cycleLink));
     }
   }
