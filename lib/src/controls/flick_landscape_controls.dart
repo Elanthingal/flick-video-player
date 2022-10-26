@@ -17,6 +17,8 @@ class FlickLandscapeControls extends StatelessWidget {
         iconSize: 30,
         progressBarSettings: FlickProgressBarSettings(
           height: 5,
+          playedColor: Colors.red,
+          bufferedColor: Colors.red.shade100,
         ),
         dataManager: dataManager);
   }
