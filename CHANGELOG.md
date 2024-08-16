@@ -1,10 +1,10 @@
-## 0.1.1
-
-Added homepage in pubspec.yaml
-
 ## 0.1.0
 
 Initial version of FlickVideoPlayer.
+
+## 0.1.1
+
+Added homepage in pubspec.yaml
 
 ## 0.2.0
 
@@ -62,7 +62,30 @@ Updated dependencies
 
 Added option to immediately hide player controls in `FlickDisplayManager`
 
-Fix - Static analysis 
+Fix - Static analysis
 
+## 0.6.0
 
+Updated Flutter version to 3.16.
 
+Upgraded dependencies
+
+## 0.7.0
+
+Fix - pub.dev warnings
+
+Fix - Deprecated widgets
+
+Fix - Web full screen issue.
+
+## 0.8.0
+
+Updated wakelock to wakelock_plus: ^1.1.4
+
+Updated video_player to latest version video_player: ^2.8.6
+
+Fix - Formatting
+
+## 0.9.0
+
+Fix - Registering the context and initializes the FlickManager after the widget is built to ensure the context is available.
